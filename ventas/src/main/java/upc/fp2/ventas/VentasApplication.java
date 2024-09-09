@@ -14,7 +14,7 @@ public class VentasApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(VentasApplication.class, args);
 
-		List<Cliente> listaCliente = new ArrayList<>();
+	/*	List<Cliente> listaCliente = new ArrayList<>();
 
 		Cliente objCliente = new Cliente();
 		objCliente.setClienteId(1L);
@@ -55,7 +55,7 @@ public class VentasApplication {
 			if (item.getPrimerNombre().equals("Julio")) {
 				iterador.remove();
 			}
-		}
+		}*/
 	}
 
 }
