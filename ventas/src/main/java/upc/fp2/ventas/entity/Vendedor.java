@@ -2,7 +2,7 @@ package upc.fp2.ventas.entity;
 
 import java.time.LocalDateTime;
 
-public class Vendedor extends Persona{
+public class Vendedor extends PersonaEntity {
     private Long vendedorId;
     private String usuario;
     private String clave;

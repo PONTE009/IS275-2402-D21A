@@ -1,8 +1,6 @@
 package upc.fp2.ventas.entity;
 
-import java.time.LocalDateTime;
-
-public class Cliente extends Persona{
+public class Cliente extends PersonaEntity {
     private Long clienteId;
     private String direccion;
 

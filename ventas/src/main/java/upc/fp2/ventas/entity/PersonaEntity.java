@@ -1,20 +1,52 @@
 package upc.fp2.ventas.entity;
 
+import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
 
-public class Persona {
+@Table(name = "tbl_persona")
+@Entity(name = "PersonaEntity")
+public class PersonaEntity {
+
+    @Id
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "sec_persona_id"
+    )
+    @SequenceGenerator(
+            sequenceName = "sec_persona_id",
+            initialValue = 1,
+            allocationSize = 1,
+            name = "sec_persona_id"
+    )
+    @Column(name = "persona_id")
     private Long personaId;
+
+    @Column(name = "primero_nombre")
     private String primerNombre;
+
+    @Column(name = "segundo_nombre")
     private String segundoNombre;
+
+    @Column(name = "apellido_paterno")
     private String apellidoPaterno;
+
+    @Column(name = "apellido_materno")
     private String apellidoMaterno;
+
+    @Column(name = "correo")
     private String correo;
+
+    @Column(name = "activo")
     private Boolean activo;
+
+    @Column(name = "fecha_registro")
     private LocalDateTime fechaRegistro;
 
-    public Persona(){};
 
-    public Persona(Long personaId, String primerNombre, String segundoNombre, String apellidoPaterno, String apellidoMaterno, String correo, Boolean activo, LocalDateTime fechaRegistro) {
+    public PersonaEntity(){};
+
+    public PersonaEntity(Long personaId, String primerNombre, String segundoNombre, String apellidoPaterno, String apellidoMaterno, String correo, Boolean activo, LocalDateTime fechaRegistro) {
         this.personaId = personaId;
         this.primerNombre = primerNombre;
         this.segundoNombre = segundoNombre;
@@ -88,4 +120,5 @@ public class Persona {
     public void setSegundoNombre(String segundoNombre) {
         this.segundoNombre = segundoNombre;
     }
+
 }
