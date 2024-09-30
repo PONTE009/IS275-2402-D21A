@@ -8,7 +8,35 @@ import java.time.LocalDateTime;
 public class Principal {
     public static void main(String[] args) {
 
-        LocalDateTime fechaActual = LocalDateTime.now();
+
+        try{
+             System.out.println("Ingreso a la sección de try");
+//             throw new Exception("Esto es una excepción controlada");
+             throw new ArrayIndexOutOfBoundsException("Esto es una excepción controlada");
+
+        }
+       /* catch (Exception ex){
+            System.out.println("Ingreso a la sección de catch");
+        }*/
+        catch (ArrayIndexOutOfBoundsException ex){
+            System.out.println("Ingreso a la sección de catch ArrayIndexOutOfBoundsException");
+        }
+        catch (NullPointerException ex){
+            System.out.println("Ingreso a la sección de catch NullPointerException");
+        }
+        finally {
+            System.out.println("Ingreso a la sección de finally");
+        }
+
+
+
+
+
+
+
+
+
+    /*    LocalDateTime fechaActual = LocalDateTime.now();
 
         Vendedor objVendor = new Vendedor();
 
@@ -37,7 +65,7 @@ public class Principal {
         objCliente.setFechaRegistro(fechaActual);
 
         objCliente.setClienteId(1L);
-        objCliente.setDireccion("pcisermer");
+        objCliente.setDireccion("pcisermer");*/
 
     }
 }
